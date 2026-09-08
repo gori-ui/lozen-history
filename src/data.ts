@@ -1,7 +1,7 @@
 export type Confidence = 'Доказано' | 'Вероятно' | 'Предание';
 export type Period = 'Праистория' | 'Античност' | 'Средновековие' | 'Османски период' | 'Възраждане' | 'Съвременност';
 export type SiteType = 'Археология' | 'Християнско наследство' | 'Селище' | 'Път и вода';
-export type Site = { id:string; title:string; period:Period; years:string; type:SiteType; confidence:Confidence; lat:number; lng:number; area?:number; summary:string; description:string; sources:{label:string;url:string}[]; image?:string };
+export type Site = { id:string; title:string; period:Period; years:string; type:SiteType; confidence:Confidence; lat:number; lng:number; area?:number; summary:string; description:string; sources:{label:string;url:string}[]; sourceIds?:string[]; image?:string };
 export const periods: {label:Period; start:number; end:number; color:string}[] = [
   {label:'Праистория',start:-5000,end:-3000,color:'#c77c52'}, {label:'Античност',start:-3000,end:500,color:'#b85e4a'}, {label:'Средновековие',start:500,end:1396,color:'#8e694f'}, {label:'Османски период',start:1396,end:1878,color:'#6f7251'}, {label:'Възраждане',start:1878,end:1944,color:'#3e7d78'}, {label:'Съвременност',start:1944,end:2026,color:'#d8a75c'}
 ];
